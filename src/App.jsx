@@ -11,7 +11,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users",
+        "https://cloud-db-bk.onrender.com/api/users",
         formData
       );
       alert(response.data.message);
@@ -27,7 +27,7 @@ function App() {
   };
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/users");
+      const response = await axios.get("https://cloud-db-bk.onrender.com/api/users");
       setUsers(response.data);
     } catch (err) {
       console.error("Error fetching users:", err);
